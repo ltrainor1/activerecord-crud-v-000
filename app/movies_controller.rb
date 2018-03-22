@@ -28,7 +28,7 @@ def can_be_created_in_a_block(args = {})
     m.release_date = args[:release_date] || nil,
     m.director = args[:director] || nil,
     m.lead = args[:lead] || nil,
-    m.in_theaters = args[:in_theaters] || nil 
+    m.in_theaters = args[:in_theaters] || nil
   end
 
   end
@@ -51,7 +51,7 @@ def can_find_the_first_item_from_the_database_using_id
 end
 
 def can_find_by_multiple_attributes
-  Movie.where(title: "Title", release_date: 2000, director: "Me")
+  Movie.where("title = ? and release_date = ? and director = ?" "Title", 2000, "Me")
   # title == "Title"
   # release_date == 2000
   # director == "Me"
